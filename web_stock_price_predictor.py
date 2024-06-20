@@ -50,15 +50,15 @@ st.pyplot(plot_graph((15,6), google_data['MA_for_100_days'],google_data,1,google
 
 def share_on_social_media(platform, url):
     encoded_url = requests.utils.quote(url)
-    if platform == "Twitter":
-        twitter_share_url = f"https://twitter.com/intent/tweet?text={encoded_url}"
-        webbrowser.open(twitter_share_url)
+    if platform == "X":
+        X_share_url = f"https://X.com/intent/tweet?text={encoded_url}"
+        webbrowser.open(X_share_url)
     elif platform == "LinkedIn":
         linkedIn_share_url = f"https://www.linkedin.com/sharing/share-offsite/?url={encoded_url}"
         webbrowser.open(linkedIn_share_url)
 
 st.sidebar.header("Share on Social Media")
-if st.sidebar.button("Share on Twitter"):
-    share_on_social_media("Twitter", "https://example.com")  # Replace with your content URL
+if st.sidebar.button("Share on X"):
+    share_on_social_media("X", "https://example.com")  # Replace with your content URL
 if st.sidebar.button("Share on LinkedIn"):
     share_on_social_media("LinkedIn", "https://example.com")  # Replace with your content URL
